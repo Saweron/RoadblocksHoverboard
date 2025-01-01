@@ -1,7 +1,6 @@
 --!strict
 
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
-
 local components = require(ReplicatedStorage.Modules.Types.Components)
 local interfaces = require(ReplicatedStorage.Modules.Types.Interfaces)
 local getset = require(ReplicatedStorage.Modules.Classes.AttributeGetset).create

@@ -2,7 +2,6 @@
 
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local RunService = game:GetService("RunService")
-
 local components = require(ReplicatedStorage.Modules.Types.Components)
 local interfaces = require(ReplicatedStorage.Modules.Types.Interfaces)
 
