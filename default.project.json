@@ -1,0 +1,166 @@
+{
+    "name": "IsolatedTesting",
+    "tree" : {
+        "$className": "DataModel",
+
+        "ReplicatedStorage": {
+            "Modules": {
+                "$path": "src/Modules"
+            }
+        },
+
+        "StarterPlayer": {
+            "StarterPlayerScripts": {
+			"Testing": {
+				"$path": "src/Testing/testing.client.luau"
+			}
+            }
+        },
+
+        "Workspace": {
+            "$className": "Workspace",
+
+            "$properties": {
+                "PhysicsSteppingMethod": "Fixed",
+                "Gravity": 196.2,
+                "StreamingEnabled": false,
+                "StreamingMinRadius": 64,
+                "StreamingTargetRadius": 256,
+                "StreamOutBehavior": "Opportunistic"
+            },
+
+		"Testing" : {
+			"$className": "Folder",
+			"$path": "src/Testing/testingScene.rbxmx"
+		},
+
+            "Baseplate" : {
+                "$className": "Part",
+                "$properties": {
+                    "Anchored": true,
+                    "Size": [2048, 16, 2048],
+                    "CFrame": [0, -8, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1],
+                    "Locked": true,
+                    "Color": [0.356862745, 0.356862745, 0.356862745],
+                    "TopSurface": "Smooth",
+                    "BottomSurface": "Smooth"
+                },
+
+                "Texture": {
+                    "$className": "Texture",
+                    "$properties": {
+                        "StudsPerTileU": 8,
+                        "StudsPerTileV": 8,
+                        "Texture": "rbxassetid://6372755229",
+                        "Transparency": 0.8,
+                        "Face": "Top",
+                        "Color3": [0,0,0]
+                    }
+                }
+            },
+
+            "SpawnLocation": {
+                "$className": "SpawnLocation",
+                "$properties": {
+                   "Size": [12,1,12],
+                   "Anchored": true,
+                   "CFrame": [0, 0.5, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1],
+                   "Color": [0.639215686, 0.635294118, 0.647058824],
+                    "TopSurface": "Smooth",
+                    "BottomSurface": "Smooth"
+                },
+
+                "Decal": {
+                    "$className": "Decal",
+                    "$properties": {
+                        "Face": "Top",
+                        "Texture": "rbxasset://textures/SpawnLocation.png"
+                    }
+                }
+            }
+        },
+        
+        "Lighting": {
+            "$properties": {
+                "Ambient": [
+                0,
+                0,
+                0
+                ],
+
+                "EnvironmentDiffuseScale": 1,
+                "EnvironmentSpecularScale": 1,
+
+                "Brightness": 3,
+                "GlobalShadows": true,
+                "Technology": "ShadowMap",
+                "ShadowSoftness": 0
+            },
+
+            "Atmosphere": {
+                "$className": "Atmosphere",
+                "$properties": {
+                "Density": 0.3,
+                "Offset": 0.25,
+
+                "Color": [0.780392157, 0.780392157, 0.780392157],
+                "Decay": [0.415686275, 0.439215686, 0.490196078],
+
+                "Glare": 0,
+                "Haze": 0
+                }
+            },
+
+            "Sky": {
+                "$className": "Sky",
+                "$properties": {
+                "CelestialBodiesShown": true,
+                "MoonAngularSize": 11,
+                "MoonTextureId": "rbxassetid://6444320592",
+                "SkyboxBk": "rbxassetid://6444884337",
+                "SkyboxDn": "rbxassetid://6444884785",
+                "SkyboxFt": "rbxassetid://6444884337",
+                "SkyboxLf": "rbxassetid://6444884337",
+                "SkyboxRt": "rbxassetid://6444884337",
+                "SkyboxUp": "rbxassetid://6412503613",
+                "StarCount": 3000,
+                "SunAngularSize": 11,
+                "SunTextureId": "rbxassetid://6196665106"
+                }
+            },
+
+            "Bloom": {
+                "$className": "BloomEffect",
+                "$properties": {
+                "Enabled": true,
+
+                "Intensity": 1,
+                "Size": 24,
+                "Threshold": 2
+                }
+            },
+
+            "PunchierColors": {
+                "$className": "ColorCorrectionEffect",
+                "$properties": {
+                "Enabled": true,
+                
+                "Brightness": 0.03,
+                "Contrast": 0.05,
+                "Saturation": -0.1,
+                "TintColor": [0.984313725, 0.976470588, 1]
+                }
+            },
+
+            "SunRays": {
+                "$className": "SunRaysEffect",
+                "$properties": {
+                "Enabled": true,
+
+                "Intensity": 0.01,
+                "Spread": 0.1
+                }
+            }
+        }
+}
+}

@@ -1,0 +1,14 @@
+# Roblox Studio lock files
+/*.rbxlx.lock
+/*.rbxl.lock
+
+# Project place file
+/workingPlace.rbxlx
+/IsolatedTesting.rbxl
+/IsolatedTesting.rbxlx
+# Roblox Studio lock files
+/*.rbxlx.lock
+/*.rbxl.lock
+
+# Sourcemap
+sourcemap.json
