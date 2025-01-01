@@ -1,17 +1,5 @@
 --!strict
 
--- EVENT
-
-export type eventConnection = {
-	disconnect: (self: eventConnection) -> ()
-}
-
-export type event<T...> = {
-	connect: (self: event<T...>, callback: (T...) -> ()) -> (eventConnection),
-	fire: (self: event<T...>, T...) -> (),
-	destroy: (self: event<T...>) -> (),
-}
-
 -- ENTITY AND COMPONENT
 
 export type entity = {
@@ -42,9 +30,15 @@ export type component = {
 
 type typedComponentExtras = {
 	getType: (self: component) -> (number),
-	destroying: event<>
 }
 
 export type typedComponent = component & typedComponentExtras
+
+-- MISC
+
+export type getset<t> = {
+	get: (self: getset<t>) -> (t),
+	set: (self: getset<t>, to: t) -> ()
+}
 
 return {}
