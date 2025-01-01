@@ -5,10 +5,9 @@ local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local components = require(ReplicatedStorage.Modules.Types.Components)
 local interfaces = require(ReplicatedStorage.Modules.Types.Interfaces)
 
+local GRAVITY_UP = Vector3.yAxis
 local DEFAULT_RAY_PARAMS = RaycastParams.new()
 DEFAULT_RAY_PARAMS.IgnoreWater = false
-
-local GRAVITY_UP = Vector3.yAxis
 
 local M = {}; local PT = {}; local MT = {__index = PT}
 
