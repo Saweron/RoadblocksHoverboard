@@ -1,9 +1,12 @@
 --!strict
 
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
+local RunService = game:GetService("RunService")
 
 local components = require(ReplicatedStorage.Modules.Types.Components)
 local interfaces = require(ReplicatedStorage.Modules.Types.Interfaces)
+
+local IS_CLIENT = RunService:IsClient()
 
 local M = {}; local PT = {}; local MT = {__index = PT}
 
@@ -27,6 +30,11 @@ function PT.get(self: class) : Player?
 	if not value then return nil end
 	if not value:IsA("Player") then return nil end
 	return value
+end
+
+function PT.set(self: class, to: Player?)
+	if IS_CLIENT then warn("cannot set owner on client"); return end
+	self._myValue.Value = to
 end
 
 function PT.destroy(self: class) return end
