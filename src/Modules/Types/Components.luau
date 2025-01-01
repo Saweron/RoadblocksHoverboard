@@ -36,7 +36,10 @@ components.hoverboardAttributes =g()
 export type hoverboardAttributes = {
 	maxSpeed: interfaces.getset<number>,
 	accelerationRate: interfaces.getset<number>,
+
 	heightResponsiveness: interfaces.getset<number>,
+	headingResponsiveness: interfaces.getset<number>,
+
 	shouldFollowCamera: interfaces.getset<boolean>,
 }
 

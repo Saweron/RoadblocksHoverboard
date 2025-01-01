@@ -18,6 +18,7 @@ function M.create(
 		maxSpeed = getset(From, "MaxSpeed", true),
 		accelerationRate = getset(From, "AccelerationRate", true),
 		heightResponsiveness = getset(From, "HeightResponsiveness", true),
+		headingResponsiveness = getset(From, "HeadingResponsiveness", true),
 		shouldFollowCamera = getset(From, "ShouldFollowCamera", true),
 	} :: class
 
