@@ -8,11 +8,11 @@ local getset = require(ReplicatedStorage.Modules.Classes.AttributeGetset).create
 
 local M = {}; local PT = {}; local MT = {__index = PT}
 
-type class = {} & components.hoverboardAttributes & interfaces.component
+type class = {} & components.hoverboardAttributes & interfaces.typedComponent
 
 function M.create(
 	From: Instance
-) : components.hoverboardAttributes & interfaces.component
+) : components.hoverboardAttributes & interfaces.typedComponent
 
 	local self = {
 		maxSpeed = getset(From, "MaxSpeed", true),

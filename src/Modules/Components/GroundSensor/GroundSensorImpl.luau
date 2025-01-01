@@ -14,12 +14,12 @@ local M = {}; local PT = {}; local MT = {__index = PT}
 type class = {
 	_castingFrom: PVInstance,
 	_myRayParams: RaycastParams
-} & components.groundSensor & interfaces.component
+} & components.groundSensor & interfaces.typedComponent
 
 function M.create(
 	castingFrom: PVInstance,
 	useRayParams: RaycastParams?
-) : components.groundSensor & interfaces.component
+) : components.groundSensor & interfaces.typedComponent
 
 	local self = {
 		_castingFrom = castingFrom,
