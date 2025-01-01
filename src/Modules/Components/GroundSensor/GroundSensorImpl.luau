@@ -6,6 +6,7 @@ local components = require(ReplicatedStorage.Modules.Types.Components)
 local interfaces = require(ReplicatedStorage.Modules.Types.Interfaces)
 
 local GRAVITY_UP = Vector3.yAxis
+local MAX_POLL_DISTANCE = 100
 local DEFAULT_RAY_PARAMS = RaycastParams.new()
 DEFAULT_RAY_PARAMS.IgnoreWater = false
 
@@ -32,7 +33,7 @@ end
 function PT.pollHeight(self: class)
 	local result = workspace:Raycast(
 		self._castingFrom:GetPivot(),
-		GRAVITY_UP,
+		-GRAVITY_UP * MAX_POLL_DISTANCE,
 		self._myRayParams
 	)
 	return result.Distance
